@@ -1,0 +1,33 @@
+.accordian {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.accordian .question, .accordian .answer {
+    width: 400px;
+    display: flex; 
+    justify-content: space-between;
+    background-color: chocolate;
+    padding: 15px;
+}
+
+.accordian .answer {
+    width: 400px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.accordian .item{
+    margin-bottom: 10px;
+    border: 1px solid chocolate;
+}
+
+.accordian .btn {
+    background-color: chartreuse;
+    padding: 8px;
+    margin-bottom: 10px;
+
+}
