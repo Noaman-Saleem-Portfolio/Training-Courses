@@ -1,0 +1,36 @@
+.menubar {
+  background-color: #fd4a36;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "poppins", "sans-serif";
+  font-weight: 500;
+  padding: 20px 3%;
+  /* position: sticky; */
+  /* top: 0px; */
+  /* padding-bottom: 30px; */
+}
+
+.menubar .logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menubar .menu-items {
+  display: flex;
+  gap: 20px;
+}
+
+.menubar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menubar a:hover {
+  color: black;
+}
+
+.menubar a.discover:hover {
+  color: #fff;
+}
