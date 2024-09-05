@@ -7,7 +7,7 @@
   font-family: "poppins", "sans-serif";
   font-weight: 500;
   padding: 20px 3%;
-  /* position: sticky; */
+  position: relative;
   /* top: 0px; */
   /* padding-bottom: 30px; */
 }
@@ -33,4 +33,49 @@
 
 .menubar a.discover:hover {
   color: #fff;
+}
+
+.menubar .sub-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* top: 55px; */
+  /* left: 650px; */
+  z-index: 10000;
+  background-color: #fd4a36;
+}
+
+.menubar .subMenuHide {
+  display: none;
+}
+
+.menubar .subMenuShow {
+  display: flex;
+}
+
+.menubar .sub-menu a {
+  padding: 15px;
+  padding-right: 40px;
+}
+
+.menubar .sub-menu a:hover {
+  background-color: #fff;
+}
+
+.menubar .sub-menu .innerMenu:hover {
+  background-color: #fd4a36;
+}
+
+.menubar .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .menubar .menu-items {
+    display: none;
+  }
+
+  .menubar .hamburger {
+    display: block;
+  }
 }

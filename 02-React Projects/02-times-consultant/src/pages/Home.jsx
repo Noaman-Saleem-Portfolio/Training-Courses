@@ -18,19 +18,19 @@ const heroContent = [
   },
   {
     heroImage: hero2,
-    tagLine: "28 June to 10 July",
-    heading: "STUDY ABROAD EXPO 2024",
+    tagLine: "Pakistan's largest education consultants",
+    heading: "MAKE YOUR STUDY ABROAD JOURNEY EASY WITH US!",
     description:
-      "Explore the world of opportunities with free entry, individual consultation and learn about new scholarships. HYDERABAD - KARACHI - LAHORE - ISLAMABAD - RAWALPINDI - SIALKOT - JHELUM - GUJRAT - PESHAWAR - FAISALABAD - MULTAN - BAHAWALPUR - SARGODHA - GUJRANWALA",
-    btnText: "View Details",
+      "Get in touch with us for expert advise regarding your academic opportunities where an unmatched team of experts is ready to help you throughout your process.",
+    btnText: "Contach Us",
   },
   {
     heroImage: hero3,
-    tagLine: "28 June to 10 July",
-    heading: "STUDY ABROAD EXPO 2024",
+    tagLine: "Explore World's Largest Course Search Portal",
+    heading: "TAKE YOUR FUTURE IN YOUR OWN HANDS!",
     description:
-      "Explore the world of opportunities with free entry, individual consultation and learn about new scholarships. HYDERABAD - KARACHI - LAHORE - ISLAMABAD - RAWALPINDI - SIALKOT - JHELUM - GUJRAT - PESHAWAR - FAISALABAD - MULTAN - BAHAWALPUR - SARGODHA - GUJRANWALA",
-    btnText: "View Details",
+      "Discover a course through the Times Course Finder and find the destination that fulfils your needs without the hassle of explaining what you want. With 60+ popular study destinations to choose from.",
+    btnText: "Discover Courses",
   },
 ];
 
@@ -39,7 +39,6 @@ const heroImages = [hero1, hero2, hero3];
 const Home = () => {
   return (
     <>
-      <Menubar />
       <Carousel>
         {heroContent.map((item, index) => {
           return (
