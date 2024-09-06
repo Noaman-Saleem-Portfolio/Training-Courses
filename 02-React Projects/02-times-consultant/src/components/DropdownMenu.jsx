@@ -9,12 +9,12 @@ const DropdownMenu = ({ showSubMenu }) => {
       //   className={`sub-menu`}
     >
       <Link to="/test">Tink bout Us</Link>
-      <a href="">What We Do</a>
+      <Link href="">What We Do</Link>
       <Link className="innerMenu" to="/test">
         Why Chose Us
       </Link>
-      <a href="">Testominal</a>
-      <a href="">Blog</a>
+      <Link href="">Testominal</Link>
+      <Link href="">Blog</Link>
     </div>
   );
 };

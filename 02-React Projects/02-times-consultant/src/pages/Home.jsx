@@ -1,40 +1,13 @@
 import React from "react";
-import Menubar from "../components/Menubar";
-import Hero from "./Hero";
 import Carousel from "../components/Carousel";
+import DestinationSlider from "../components/DestinationSlider";
+import { FaArrowRightLong } from "react-icons/fa6";
 
-import hero1 from "../assets/home/hero-bg.png";
-import hero2 from "../assets/home/hero-bgg2.png";
-import hero3 from "../assets/home/hero-bg3.png";
+import { destinationSliderData } from "../data";
+import { heroContent } from "../data";
+import { Link } from "react-router-dom";
 
-const heroContent = [
-  {
-    heroImage: hero1,
-    tagLine: "28 June to 10 July",
-    heading: "STUDY ABROAD EXPO 2024",
-    description:
-      "Explore the world of opportunities with free entry, individual consultation and learn about new scholarships. HYDERABAD - KARACHI - LAHORE - ISLAMABAD - RAWALPINDI - SIALKOT - JHELUM - GUJRAT - PESHAWAR - FAISALABAD - MULTAN - BAHAWALPUR - SARGODHA - GUJRANWALA",
-    btnText: "View Details",
-  },
-  {
-    heroImage: hero2,
-    tagLine: "Pakistan's largest education consultants",
-    heading: "MAKE YOUR STUDY ABROAD JOURNEY EASY WITH US!",
-    description:
-      "Get in touch with us for expert advise regarding your academic opportunities where an unmatched team of experts is ready to help you throughout your process.",
-    btnText: "Contach Us",
-  },
-  {
-    heroImage: hero3,
-    tagLine: "Explore World's Largest Course Search Portal",
-    heading: "TAKE YOUR FUTURE IN YOUR OWN HANDS!",
-    description:
-      "Discover a course through the Times Course Finder and find the destination that fulfils your needs without the hassle of explaining what you want. With 60+ popular study destinations to choose from.",
-    btnText: "Discover Courses",
-  },
-];
-
-const heroImages = [hero1, hero2, hero3];
+// console.log(destinationSliderData);
 
 const Home = () => {
   return (
@@ -53,7 +26,7 @@ const Home = () => {
                 height: "91vh",
                 flex: "0 0 100%",
               }}
-              className="w-[100%] flex items-center pl-[80px]"
+              className=" flex items-center pl-[80px]"
             >
               <div className="w-[60%] text-white flex flex-col justify-between items-start gap-5">
                 <p className="font-[500] text-[22px] border-l-4 border-[#fd4a36] pl-[10px] pt-0 pb-[4px] font-serif ">
@@ -66,13 +39,55 @@ const Home = () => {
                   {item.description}
                 </p>
                 <button className="bg-[#fd4a36] w-[200px] py-[15px] rounded-[30px] font-[600]">
-                  {item.btnText} ----
+                  {item.btnText}{" "}
+                  <FaArrowRightLong className="inline-block ml-1" />
                 </button>
               </div>
             </div>
           );
         })}
       </Carousel>
+      <DestinationSlider>
+        {destinationSliderData.map((item, index) => {
+          return (
+            <div
+              key={index}
+              style={{
+                flex: "0 0 100%",
+              }}
+              className="flex flex-col items-center"
+            >
+              <img
+                src={item.image}
+                className="w-[70%] mb-[15px] rounded-[50px] hover:scale-[1.08]"
+                alt=""
+              />
+              <Link className="border border-[#fd4a36] py-[10px] px-[30px] rounded-[20px]">
+                <button>{item.country}</button>
+              </Link>
+            </div>
+          );
+        })}
+      </DestinationSlider>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat quas
+        omnis eveniet tenetur voluptatibus, beatae animi debitis, totam eius
+        minima aut ipsam nam corrupti mollitia nostrum delectus voluptates!
+        Autem, esse? Laborum neque ut ducimus! Veritatis dolorem alias eum?
+        Doloribus, libero, similique, quasi ullam iste dicta consectetur quam
+        deserunt laboriosam alias velit assumenda impedit facere ipsum unde hic
+        quaerat obcaecati cupiditate. Necessitatibus veritatis quas dicta
+        perspiciatis rem amet. Voluptate eius velit minima eum voluptatum quo
+        modi. Iste doloribus iusto sit, delectus, totam nemo laborum assumenda
+        qui fuga commodi, quod sunt placeat. Incidunt, doloremque autem.
+        Architecto officia porro cumque dicta odit, error fuga commodi harum.
+        Neque vel ullam accusamus dignissimos quam sint praesentium distinctio
+        optio iure quibusdam, nobis consectetur ab fugit? Tenetur! Doloribus
+        itaque fuga commodi culpa asperiores, numquam dolore recusandae maxime
+        excepturi natus aspernatur similique voluptas quas animi vitae dolor
+        eveniet corrupti autem facere. Dolores odit sapiente consequuntur
+        quisquam et architecto.
+      </p>
     </>
   );
 };
