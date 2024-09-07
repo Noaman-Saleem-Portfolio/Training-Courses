@@ -2,12 +2,14 @@ import React from "react";
 import Carousel from "../components/Carousel";
 import DestinationSlider from "../components/DestinationSlider";
 import { FaArrowRightLong } from "react-icons/fa6";
+import ServicesSlider from "../components/ServicesSlider";
+import { Link } from "react-router-dom";
+import { servicesSliderData } from "../data";
 
 import { destinationSliderData } from "../data";
 import { heroContent } from "../data";
-import { Link } from "react-router-dom";
 
-// console.log(destinationSliderData);
+// console.log(servicesSliderData);
 
 const Home = () => {
   return (
@@ -47,47 +49,69 @@ const Home = () => {
           );
         })}
       </Carousel>
-      <DestinationSlider>
-        {destinationSliderData.map((item, index) => {
-          return (
-            <div
-              key={index}
-              style={{
-                flex: "0 0 100%",
-              }}
-              className="flex flex-col items-center"
-            >
-              <img
-                src={item.image}
-                className="w-[70%] mb-[15px] rounded-[50px] hover:scale-[1.08]"
-                alt=""
-              />
-              <Link className="border border-[#fd4a36] py-[10px] px-[30px] rounded-[20px]">
-                <button>{item.country}</button>
-              </Link>
-            </div>
-          );
-        })}
-      </DestinationSlider>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat quas
-        omnis eveniet tenetur voluptatibus, beatae animi debitis, totam eius
-        minima aut ipsam nam corrupti mollitia nostrum delectus voluptates!
-        Autem, esse? Laborum neque ut ducimus! Veritatis dolorem alias eum?
-        Doloribus, libero, similique, quasi ullam iste dicta consectetur quam
-        deserunt laboriosam alias velit assumenda impedit facere ipsum unde hic
-        quaerat obcaecati cupiditate. Necessitatibus veritatis quas dicta
-        perspiciatis rem amet. Voluptate eius velit minima eum voluptatum quo
-        modi. Iste doloribus iusto sit, delectus, totam nemo laborum assumenda
-        qui fuga commodi, quod sunt placeat. Incidunt, doloremque autem.
-        Architecto officia porro cumque dicta odit, error fuga commodi harum.
-        Neque vel ullam accusamus dignissimos quam sint praesentium distinctio
-        optio iure quibusdam, nobis consectetur ab fugit? Tenetur! Doloribus
-        itaque fuga commodi culpa asperiores, numquam dolore recusandae maxime
-        excepturi natus aspernatur similique voluptas quas animi vitae dolor
-        eveniet corrupti autem facere. Dolores odit sapiente consequuntur
-        quisquam et architecto.
-      </p>
+
+      <div className="studyDestination">
+        <div className="textContent flex justify-between pt-16 px-16">
+          <h2 className="text-4xl font-[600]">
+            Choose from the top study destinations.
+          </h2>
+          <p className="w-[70%] text-[20px]">
+            When it comes to studying abroad, there are several countries giving
+            international student great opportunities of higher education and
+            becoming part of their international community. See which country
+            suits you best.
+          </p>
+        </div>
+        <DestinationSlider>
+          {destinationSliderData.map((item, index) => {
+            return (
+              <div
+                key={index}
+                style={{
+                  flex: "0 0 100%",
+                }}
+                className="flex flex-col items-center"
+              >
+                <img
+                  src={item.image}
+                  className="w-[70%] mb-[15px] rounded-[50px] hover:scale-[1.08]"
+                  alt=""
+                />
+                <Link className="border border-[#fd4a36] py-[10px] px-[30px] rounded-[20px]">
+                  <button>{item.country}</button>
+                </Link>
+              </div>
+            );
+          })}
+        </DestinationSlider>
+      </div>
+
+      <div className="services">
+        <div className="title flex justify-center">
+          <h2 className="text-4xl font-[600] text-center w-[40%]">
+            Our Business & Financial Consulting Services
+          </h2>
+        </div>
+        <ServicesSlider>
+          {servicesSliderData.map((item, index) => {
+            return (
+              <div
+                key={index}
+                style={{
+                  flex: "0 0 100%",
+                }}
+                className={`p-16 flex flex-col items-center gap-4 bg-[#071327] text-white mr-[55px] ${
+                  index === 0 ? "" : ""
+                }`}
+              >
+                {item.logo}
+                <h3 className="text-[20px] text-center font-[600]">{item.title}</h3>
+                <p className="text-center">{item.description}</p>
+              </div>
+            );
+          })}
+        </ServicesSlider>
+      </div>
     </>
   );
 };

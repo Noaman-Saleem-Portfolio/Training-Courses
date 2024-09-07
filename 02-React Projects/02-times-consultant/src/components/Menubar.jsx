@@ -49,7 +49,7 @@ const Menubar = () => {
       </nav>
       {slideMenu && (
         <span
-          className="bg-black opacity-[0.6] w-[100%] left-0 h-[100%] absolute z-[10] "
+          className="bg-black opacity-[0.6] w-[100%] bottom-0 top-0 fixed z-[9] "
           onClick={() => {
             setSlideMenu(false);
             setIsHamClicked(false);

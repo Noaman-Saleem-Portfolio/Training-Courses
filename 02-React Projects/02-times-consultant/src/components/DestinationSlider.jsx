@@ -4,7 +4,7 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const DestinationSlider = ({
   children: slides,
-  autoSlide = false,
+  autoSlide = false, 
   autoSlideInterval = 3000,
 }) => {
   {
