@@ -7,6 +7,7 @@ import "./index.css";
 import "./app.css";
 import "./styles/menubar.css";
 import "./styles/hero.css";
+import "./styles/destination.css";
 
 function App() {
   return (

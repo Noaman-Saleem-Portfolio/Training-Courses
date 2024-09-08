@@ -1,0 +1,17 @@
+#destinationContainer {
+  /* transition: all 100s ease; */
+}
+
+@media screen and (max-width: 950px) {
+  #destinationContainer {
+    width: 33%;
+    background-color: yellow;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #destinationContainer {
+    width: 50%;
+    background-color: red;
+  }
+}

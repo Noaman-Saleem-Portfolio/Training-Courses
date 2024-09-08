@@ -19,6 +19,7 @@ const Menubar = () => {
             className="discover"
             onMouseEnter={() => setShowSubMenu(true)}
             onMouseLeave={() => setShowSubMenu(false)}
+            onClick={() => setShowSubMenu(!showSubMenu)}
           >
             Discover More
             <FaCaretDown className="inline-block" />

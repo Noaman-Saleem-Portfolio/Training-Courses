@@ -7,3 +7,58 @@
 /* .hero h1 {
   color: red;
 } */
+
+@media screen and (max-width: 1200px) {
+  .heroContent {
+    width: 100%;
+    padding-right: 80px;
+  }
+
+  .heroContent .tagLine {
+    /* padding-top: 20px; */
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .heroContent {
+    width: 100%;
+    padding-right: 80px;
+  }
+
+  .heroContent .tagLine {
+    /* padding-top: 20px; */
+  }
+
+  .heroContent .heroHeading {
+    font-size: 32px;
+  }
+
+  .heroContent .heroDesc {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .herodiv {
+    align-items: start;
+    padding-top: 100px;
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .herodiv {
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .herodiv {
+    padding-top: 70px;
+    height: 85vh;
+  }
+
+  .heroContent .heroHeading {
+    font-size: 26px;
+  }
+}

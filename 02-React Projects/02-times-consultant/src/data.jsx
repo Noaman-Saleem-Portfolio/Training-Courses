@@ -5,7 +5,11 @@ import { GrAnalytics } from "react-icons/gr";
 import { FcOnlineSupport } from "react-icons/fc";
 import { PiBooksBold } from "react-icons/pi";
 
-const iconsArray =[<GrAnalytics className="text-[100px]" />,<FcOnlineSupport className="text-[100px]" />,<PiBooksBold className="text-[100px]" />]
+const iconsArray = [
+  <GrAnalytics className="text-[100px]" />,
+  <FcOnlineSupport className="text-[100px]" />,
+  <PiBooksBold className="text-[100px]" />,
+];
 
 export const destinationSliderData = [
   {
@@ -89,33 +93,39 @@ export const heroContent = [
 
 export const servicesSliderData = [
   {
-    logo:iconsArray[0],
-    title:"Career Guidance",
-    description:"Deciding what profession you should go into is easier when you, have us helping you make an informed decision"
+    logo: iconsArray[0],
+    title: "Career Guidance",
+    description:
+      "Deciding what profession you should go into is easier when you, have us helping you make an informed decision",
   },
   {
-    logo:iconsArray[1],
-    title:"Post Admission Support",
-    description:"Even after getting admitted to a university, our team provides support at every step for the new life ahead"
+    logo: iconsArray[1],
+    title: "Post Admission Support",
+    description:
+      "Even after getting admitted to a university, our team provides support at every step for the new life ahead",
   },
   {
-    logo:iconsArray[2],
-    title:"Test Preparation",
-    description:"We offer complete support in preparing for language tests like IELTS, TOEFL, PTE so you can succeed"
+    logo: iconsArray[2],
+    title: "Test Preparation",
+    description:
+      "We offer complete support in preparing for language tests like IELTS, TOEFL, PTE so you can succeed",
   },
   {
-    logo:iconsArray[1],
-    title:"Post Admission Support",
-    description:"Even after getting admitted to a university, our team provides support at every step for the new life ahead"
+    logo: iconsArray[1],
+    title: "Post Admission Support",
+    description:
+      "Even after getting admitted to a university, our team provides support at every step for the new life ahead",
   },
   {
-    logo:iconsArray[2],
-    title:"Career Guidance",
-    description:"Deciding what profession you should go into is easier when you, have us helping you make an informed decision"
+    logo: iconsArray[2],
+    title: "Career Guidance",
+    description:
+      "Deciding what profession you should go into is easier when you, have us helping you make an informed decision",
   },
   {
-    logo:iconsArray[0],
-    title:"Test Preparation",
-    description:"We offer complete support in preparing for language tests like IELTS, TOEFL, PTE so you can succeed"
+    logo: iconsArray[0],
+    title: "Test Preparation",
+    description:
+      "We offer complete support in preparing for language tests like IELTS, TOEFL, PTE so you can succeed",
   },
-]
+];

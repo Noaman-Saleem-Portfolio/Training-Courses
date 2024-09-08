@@ -77,7 +77,7 @@
     /* display: none; */
     flex-direction: column;
     gap: 0;
-    position: absolute;
+    position: fixed;
     width: 60%;
     justify-content: center;
     /* align-items: center; */
@@ -88,7 +88,7 @@
     /* height: 100%; */
     transition: all 0.7s ease-in;
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    box-shadow: -4px 8px 10px 0px #c9c2c2;
+    box-shadow: -4px 8px 10px 0px #646363;
   }
 
   .menubar .slideMenu {
@@ -96,7 +96,7 @@
   }
 
   .menubar .sub-menu {
-    left: 180px;
+    left: 80px;
   }
 
   .menubar a {
@@ -108,5 +108,12 @@
 
   .menubar .hamburger {
     display: block;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .menubar .sub-menu {
+    left: 40px;
+    /* background-color: yellow; */
   }
 }

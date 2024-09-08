@@ -4,18 +4,62 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const DestinationSlider = ({
   children: slides,
-  autoSlide = false, 
+  autoSlide = false,
   autoSlideInterval = 3000,
 }) => {
   {
-    console.log(slides);
+    console.log(slides.length);
+    console.log(window.screen.width);
 
     const [curr, setCurr] = useState(0);
+    const [numOfSlides, setNumOfSlides] = useState(2);
+    const [multiplyFactor, setMultiplyFactor] = useState(400);
 
-    const prev = () =>
-      setCurr((curr) => (curr === 0 ? slides.length % 4 : curr - 1));
-    const next = () =>
-      setCurr((curr) => (curr === slides.length % 4 ? 0 : curr + 1));
+    //infine rerenders
+    // if (window.screen.width > 950) {
+    //   setNumOfSlides(2);
+    //   setMultiplyFactor(400);
+    // } else if (window.screen.width > 650) {
+    //   setNumOfSlides(3);
+    //   setMultiplyFactor(300);
+    // } else {
+    //   setNumOfSlides(4);
+    //   setMultiplyFactor(200);
+    // }
+
+    const prev = () => {
+      // setCurr((curr) => (curr === 0 ? numOfSlides : curr - 1));
+      if (window.screen.width > 950) {
+        setNumOfSlides(2);
+        setMultiplyFactor(400);
+        setCurr((curr) => (curr === 0 ? numOfSlides : curr - 1));
+      } else if (window.screen.width > 650) {
+        setNumOfSlides(3);
+        setMultiplyFactor(300);
+        setCurr((curr) => (curr === 0 ? numOfSlides : curr - 1));
+      } else {
+        setNumOfSlides(4);
+        setMultiplyFactor(200);
+        setCurr((curr) => (curr === 0 ? numOfSlides : curr - 1));
+      }
+    };
+
+    const next = () => {
+      // setCurr((curr) => (curr === numOfSlides ? 0 : curr + 1));
+      if (window.screen.width > 950) {
+        setNumOfSlides(2);
+        setMultiplyFactor(400);
+        setCurr((curr) => (curr === numOfSlides ? 0 : curr + 1));
+      } else if (window.screen.width > 650) {
+        setNumOfSlides(3);
+        setMultiplyFactor(300);
+        setCurr((curr) => (curr === numOfSlides ? 0 : curr + 1));
+      } else {
+        setNumOfSlides(4);
+        setMultiplyFactor(200);
+        setCurr((curr) => (curr === numOfSlides ? 0 : curr + 1));
+      }
+    };
 
     useEffect(() => {
       if (!autoSlide) return;
@@ -26,8 +70,9 @@ const DestinationSlider = ({
       <div className="overflow-hidden relative pt-[60px] pb-[90px] ">
         {/* {slides[1]} */}
         <div
-          className="flex transition-transform ease-out duration-500 w-[25%] "
-          style={{ transform: `translateX(-${curr * 400}%)` }}
+          id="destinationContainer"
+          className=" flex transition-transform ease-out duration-500  w-[25%] "
+          style={{ transform: `translateX(-${curr * multiplyFactor}%)` }}
         >
           {slides}
         </div>

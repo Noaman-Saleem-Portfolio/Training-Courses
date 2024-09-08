@@ -24,20 +24,20 @@ const Home = () => {
               key={index}
               style={{
                 background: `url(${item.heroImage})`,
-                height: "500px",
-                height: "91vh",
+                // height: "500px",
+                // height: "91vh",
                 flex: "0 0 100%",
               }}
-              className=" flex items-center pl-[80px]"
+              className="herodiv flex items-center pl-[80px] h-[91vh]"
             >
-              <div className="w-[60%] text-white flex flex-col justify-between items-start gap-5">
-                <p className="font-[500] text-[22px] border-l-4 border-[#fd4a36] pl-[10px] pt-0 pb-[4px] font-serif ">
+              <div className="heroContent w-[60%] text-white flex flex-col  items-start gap-5">
+                <p className="tagLine font-[500] text-[22px] border-l-4 border-[#fd4a36] pl-[10px] pt-0 pb-[4px] font-serif ">
                   {item.tagLine}
                 </p>
-                <h2 className="font-bold text-[45px] font-serif">
+                <h2 className="heroHeading font-bold text-[45px] font-serif">
                   {item.heading}
                 </h2>
-                <p className="text-[20px] mb-[18px] font-[poppins]">
+                <p className="heroDesc text-[20px] mb-[18px] font-[poppins]">
                   {item.description}
                 </p>
                 <button className="bg-[#fd4a36] w-[200px] py-[15px] rounded-[30px] font-[600]">
@@ -105,7 +105,9 @@ const Home = () => {
                 }`}
               >
                 {item.logo}
-                <h3 className="text-[20px] text-center font-[600]">{item.title}</h3>
+                <h3 className="text-[20px] text-center font-[600]">
+                  {item.title}
+                </h3>
                 <p className="text-center">{item.description}</p>
               </div>
             );
