@@ -55,10 +55,21 @@
 @media screen and (max-width: 430px) {
   .herodiv {
     padding-top: 70px;
+    padding-left: 50px;
     height: 85vh;
+  }
+
+  .heroContent {
+    /* gap: 0; */
+    padding-right: 50px;
   }
 
   .heroContent .heroHeading {
     font-size: 26px;
+  }
+
+  .carousel button {
+    padding: 0px;
+    /* background-color: red; */
   }
 }

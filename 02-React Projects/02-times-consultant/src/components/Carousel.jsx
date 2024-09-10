@@ -6,7 +6,7 @@ export default function Carousel({
   autoSlide = false,
   autoSlideInterval = 3000,
 }) {
-  // console.log(slides); 
+  // console.log(slides);
 
   const [curr, setCurr] = useState(0);
 
@@ -21,7 +21,7 @@ export default function Carousel({
     return () => clearInterval(slideInterval);
   }, []);
   return (
-    <div className="overflow-hidden relative">
+    <div className="carousel overflow-hidden relative">
       {/* {slides[1]} */}
       <div
         className="flex transition-transform ease-out duration-500"

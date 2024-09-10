@@ -5,13 +5,25 @@
 @media screen and (max-width: 950px) {
   #destinationContainer {
     width: 33%;
-    background-color: yellow;
+    /* background-color: yellow; */
   }
 }
 
 @media screen and (max-width: 650px) {
+  .studyDestination .textContent {
+    flex-direction: column;
+    gap: 30px;
+    /* background-color: red; */
+    padding-right: 0px;
+    padding-left: 0px;
+    align-items: center;
+  }
+
+  .studyDestination .textContent h2 {
+    text-align: center;
+  }
   #destinationContainer {
     width: 50%;
-    background-color: red;
+    /* background-color: red; */
   }
 }

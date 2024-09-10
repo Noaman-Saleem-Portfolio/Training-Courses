@@ -8,6 +8,7 @@ import "./app.css";
 import "./styles/menubar.css";
 import "./styles/hero.css";
 import "./styles/destination.css";
+import "./styles/services.css";
 
 function App() {
   return (

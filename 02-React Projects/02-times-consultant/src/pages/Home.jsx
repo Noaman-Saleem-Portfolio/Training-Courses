@@ -88,27 +88,35 @@ const Home = () => {
 
       <div className="services">
         <div className="title flex justify-center">
-          <h2 className="text-4xl font-[600] text-center w-[40%]">
+          <h2
+            id="servicesTitle"
+            className="text-4xl font-[600] text-center w-[40%]"
+          >
             Our Business & Financial Consulting Services
           </h2>
         </div>
         <ServicesSlider>
           {servicesSliderData.map((item, index) => {
             return (
-              <div
-                key={index}
-                style={{
-                  flex: "0 0 100%",
-                }}
-                className={`p-16 flex flex-col items-center gap-4 bg-[#071327] text-white mr-[55px] ${
-                  index === 0 ? "" : ""
-                }`}
-              >
-                {item.logo}
-                <h3 className="text-[20px] text-center font-[600]">
-                  {item.title}
-                </h3>
-                <p className="text-center">{item.description}</p>
+              <div className="services123 w-[50px]">
+                <div
+                  key={index}
+                  style={
+                    {
+                      // flex: "0 0 100%",
+                      // flexBasis: "33%",
+                    }
+                  }
+                  className={`servicesDiv flex flex-col items-center  gap-4 bg-[#071327]  text-white  ${
+                    index === 0 ? "" : ""
+                  }`}
+                >
+                  {item.logo}
+                  <h3 className="text-[20px] text-center font-[600]">
+                    {item.title}
+                  </h3>
+                  <p className="text-center">{item.description}</p>
+                </div>
               </div>
             );
           })}

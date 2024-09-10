@@ -1,0 +1,18 @@
+.services .servicesDiv {
+  flex: 0 0 100%;
+}
+
+@media screen and (max-width: 996px) {
+  .services .title h2 {
+    width: 80%;
+    /* color: red; */
+    /* background-color: red; */
+    font-size: 26px;
+  }
+
+  .services .servicesDiv {
+    /* flex-basis: 200px; */
+    /* padding: 50px; */
+    /* background-color: pink; */
+  }
+}
